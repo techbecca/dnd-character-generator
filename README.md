@@ -11,21 +11,9 @@ After installing Node.js, open a terminal and nagigate to the top folder of this
 ## Code Examples
 *In Progress*
 
-## Features
-List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
-
-To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
-
 ## Status
 Project is: _in progress_
 
 ## Inspiration
 This project fulfills the requirements of Codecademy's Mixed Messages project in the Full-Stack Engineer path.
-
-## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+README template: created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
