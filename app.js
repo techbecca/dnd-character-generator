@@ -1,8 +1,8 @@
 
 let template = {
     classes: ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"],
-    races: ["Dragonborn","Dwarf", "Elf", "Gnome", "Half-Elf", "Halfling", "Half-Orc", "Human", "Tiefling"],
-    attitudes: ['contemplative','conventional','critical','disappointed','disdainful','disgruntled','disgusted','disinterested','dreamy','droll','earnest','ecstatic','elated','elevated','encouraging','energetic','enthusiastic','excited','fanciful','friendly','furious','giddy','gloomy','happy','harsh','hateful','haughty','hopeful','humorous','hurtful','impassioned','indignant','inflammatory','insolent','intimate','amused','angry','arrogant','artificial','authoritative','brave','callous','calm','caustic','cheerful','cheery','childish','choleric','coarse','comical','compassionate','complimentary','condemnatory','condescension','confident','consoling','ironic','irreverent','irritated','joking','joyful','jubilant','judgmental','lighthearted','mock-heroic','objective','obnoxious','optimistic','outraged','passionate','passive','peaceful','pessimistic','playful','pleasant','proud','reflective','relaxed','reverent','ribald','ridicule','romantic','sad','scornful','shameful','sharp','silly','sincere','smooth','snooty','solemn','superficial','surprised','sweet','testy','threatening','tired','uninterested','vibrant','whimsical'],
+    races: ["Dragonborn", "Dwarf", "Elf", "Gnome", "Half-Elf", "Halfling", "Half-Orc", "Human", "Tiefling"],
+    attitudes: ['contemplative', 'conventional', 'critical', 'disappointed', 'disdainful', 'disgruntled', 'disgusted', 'disinterested', 'dreamy', 'droll', 'earnest', 'ecstatic', 'elated', 'elevated', 'encouraging', 'energetic', 'enthusiastic', 'excited', 'fanciful', 'friendly', 'furious', 'giddy', 'gloomy', 'happy', 'harsh', 'hateful', 'haughty', 'hopeful', 'humorous', 'hurtful', 'impassioned', 'indignant', 'inflammatory', 'insolent', 'intimate', 'amused', 'angry', 'arrogant', 'artificial', 'authoritative', 'brave', 'callous', 'calm', 'caustic', 'cheerful', 'cheery', 'childish', 'choleric', 'coarse', 'comical', 'compassionate', 'complimentary', 'condemnatory', 'condescension', 'confident', 'consoling', 'ironic', 'irreverent', 'irritated', 'joking', 'joyful', 'jubilant', 'judgmental', 'lighthearted', 'mock-heroic', 'objective', 'obnoxious', 'optimistic', 'outraged', 'passionate', 'passive', 'peaceful', 'pessimistic', 'playful', 'pleasant', 'proud', 'reflective', 'relaxed', 'reverent', 'ribald', 'ridicule', 'romantic', 'sad', 'scornful', 'shameful', 'sharp', 'silly', 'sincere', 'smooth', 'snooty', 'solemn', 'superficial', 'surprised', 'sweet', 'testy', 'threatening', 'tired', 'uninterested', 'vibrant', 'whimsical'],
     quirks: ['You’re a vegan, and make sure everyone you meet knows.',
         'You’re obsessed with personal hygiene.',
         'You don’t like people you don’t already know. People can still make it into your good graces as you get to know them.',
@@ -105,13 +105,42 @@ let template = {
         'You overexaggerate when telling stories of your past deeds.']
 }
 
-let dndClass = classes[0];
-let race = races[0];
-let attitude = attitudes[0];
-let quirk = quirks[0];
+function numGenerator(num) {
+    return Math.floor(Math.random() * num);
+}
 
-// let character = `A ${attitude} ${race} ${dndClass}. ${quirk}`; 
+function randEntry(arr) {
+    return arr[numGenerator(arr.length)];
+}
 
-//let iterator = Object.values(template);
+function startsWithVowel(str) {
+    const vowelRegex = /^[aeiou].*/i;
+    let matched = str.match(vowelRegex);
+    if (matched) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
-// for (values in template) {}
+function randCharacter() {
+    let dndClass = randEntry(template.classes);
+    let race = randEntry(template.races);
+    let attitude = randEntry(template.attitudes);
+    let quirk = randEntry(template.quirks);
+    let indefArticle = 'a';
+    if (startsWithVowel(attitude)) {
+        indefArticle = 'an';
+    }
+
+    return `You're ${indefArticle} ${attitude} ${race} ${dndClass}. ${quirk}`;
+}
+
+function generateCharacters(num) {
+    let str = "";
+    for (let i = 0; i < num; i++) {
+        str += (i + 1) + ': ' + randCharacter() + `\n`;
+    }
+    return str;
+}
+console.log(generateCharacters(10));
