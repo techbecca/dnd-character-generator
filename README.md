@@ -6,7 +6,7 @@ This is a message generator aiming to generate suggestions for DnD characters.
 * JavaScript
 
 ## Setup
-After installing Node.js, open a terminal and nagigate to the top folder of this repository. There, run `node mixedMessages.js`.
+After installing Node.js, open a terminal and nagigate to the top folder of this repository. There, run `node app.js`.
 
 ## Code Examples
 *In Progress*

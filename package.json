@@ -2,7 +2,7 @@
   "name": "mixed-messages",
   "version": "1.0.0",
   "description": "A random generator for DnD character generators",
-  "main": "mixedMessages.js",
+  "main": "app.js",
   "dependencies": {
     "n": "^7.0.1"
   },
