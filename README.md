@@ -1,5 +1,5 @@
-# Mixed Messages - a message generator
-This is a message generator aiming to generate suggestions for DnD characters.
+# Dungeons and Dragons character idea generator
+This is a message generator aiming to generate ideas for DnD characters.
 
 ## Technologies
 * Node.js - version 14.15.4
