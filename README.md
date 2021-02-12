@@ -8,11 +8,8 @@ This is a message generator aiming to generate ideas for DnD characters.
 ## Setup
 After installing Node.js, open a terminal and nagigate to the top folder of this repository. There, run `node app.js`.
 
-## Code Examples
-*In Progress*
-
 ## Status
-Project is: _in progress_
+Project is: finished
 
 ## Inspiration
 This project fulfills the requirements of Codecademy's Mixed Messages project in the Full-Stack Engineer path.
