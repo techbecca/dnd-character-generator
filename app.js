@@ -44,7 +44,7 @@ let template = {
         'You are very bad at eating with utensils. If you use a fork, you must pass a test, (GMs choice) or stab your tounge.',
         'You sneeze whenever someone says your name.',
         'You forget people’s names. Whenever talking to someone you must pass an int check or say the wrong name. Once you get it right without being reminded you remember the name of that person.',
-        'You hate sand, because it’s course and rough and it gets everywhere.',
+        'You hate sand, because it’s coarse and rough and it gets everywhere.',
         'You’re extremely conscious of proper posture. You’re constantly standing or sitting up straight.',
         'You have a huge smile that never reaches your eyes.',
         'You’re constantly humming a tune, not always the same one. It’s very soft and most of the time you don’t even know you’re doing it. If asked, you will say the tune is from a particular song, but anyone who makes a DC 15 History check will know it’s not the tune from that song at all.',
@@ -113,23 +113,15 @@ function randEntry(arr) {
     return arr[numGenerator(arr.length)];
 }
 
-function startsWithVowel(str) {
-    const vowelRegex = /^[aeiou].*/i;
-    let matched = str.match(vowelRegex);
-    if (matched) {
-        return true;
-    } else {
-        return false;
-    }
-}
 
 function randCharacter() {
     let dndClass = randEntry(template.classes);
     let race = randEntry(template.races);
     let attitude = randEntry(template.attitudes);
     let quirk = randEntry(template.quirks);
+
     let indefArticle = 'a';
-    if (startsWithVowel(attitude)) {
+    if (attitude.match(/^[aeiou].*/i)) { // If word starts with a vowel
         indefArticle = 'an';
     }
 
