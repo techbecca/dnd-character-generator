@@ -6,7 +6,14 @@ This is a message generator aiming to generate ideas for DnD characters.
 * JavaScript
 
 ## Setup
-After installing Node.js, open a terminal and nagigate to the top folder of this repository. There, run `node app.js`.
+After cloning the repository and installing Node.js, open a terminal and navigate to the top folder of this repository. There, run `node app.js`.
+
+```
+$ git clone git@github.com:techbecca/dnd-character-generator.git
+$ cd ./dnd-character-generator
+$ npm install
+$ node app.js
+```
 
 ## Status
 Project is: finished
