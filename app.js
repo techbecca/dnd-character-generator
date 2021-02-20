@@ -139,8 +139,8 @@ function randCharacter() {
 function generateCharacters(num) {
     let str = "";
     for (let i = 0; i < num; i++) {
-        str += (i + 1) + ': ' + randCharacter() + `\n`;
+        str +=randCharacter() + `\n\n`;
     }
     return str;
 }
-console.log(generateCharacters(10));
+console.log(generateCharacters(1));
