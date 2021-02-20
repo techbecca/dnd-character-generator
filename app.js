@@ -120,10 +120,7 @@ function randCharacter() {
     const attitude = randEntry(template.attitudes);
     const quirk = randEntry(template.quirks);
 
-    let indefArticle = 'a';
-    if (attitude.match(/^[aeiou].*/i)) { // If word starts with a vowel
-        indefArticle = 'an';
-    }
+    const indefArticle = attitude.match(/^[aeiou].*/i) ? 'an' : 'a'; // If word starts with a vowel, use "an"
 
     return `You're ${indefArticle} ${attitude} ${race} ${dndClass}. ${quirk}`;
 }
