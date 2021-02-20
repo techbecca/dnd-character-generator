@@ -1,5 +1,5 @@
 
-let template = {
+const template = {
     classes: ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"],
     races: ["Dragonborn", "Dwarf", "Elf", "Gnome", "Half-Elf", "Halfling", "Half-Orc", "Human", "Tiefling"],
     attitudes: ['contemplative', 'conventional', 'critical', 'disappointed', 'disdainful', 'disgruntled', 'disgusted', 'disinterested', 'dreamy', 'droll', 'earnest', 'ecstatic', 'elated', 'elevated', 'encouraging', 'energetic', 'enthusiastic', 'excited', 'fanciful', 'friendly', 'furious', 'giddy', 'gloomy', 'happy', 'harsh', 'hateful', 'haughty', 'hopeful', 'humorous', 'hurtful', 'impassioned', 'indignant', 'inflammatory', 'insolent', 'intimate', 'amused', 'angry', 'arrogant', 'artificial', 'authoritative', 'brave', 'callous', 'calm', 'caustic', 'cheerful', 'cheery', 'childish', 'choleric', 'coarse', 'comical', 'compassionate', 'complimentary', 'condemnatory', 'condescension', 'confident', 'consoling', 'ironic', 'irreverent', 'irritated', 'joking', 'joyful', 'jubilant', 'judgmental', 'lighthearted', 'mock-heroic', 'objective', 'obnoxious', 'optimistic', 'outraged', 'passionate', 'passive', 'peaceful', 'pessimistic', 'playful', 'pleasant', 'proud', 'reflective', 'relaxed', 'reverent', 'ribald', 'ridicule', 'romantic', 'sad', 'scornful', 'shameful', 'sharp', 'silly', 'sincere', 'smooth', 'snooty', 'solemn', 'superficial', 'surprised', 'sweet', 'testy', 'threatening', 'tired', 'uninterested', 'vibrant', 'whimsical'],
@@ -115,10 +115,10 @@ function randEntry(arr) {
 
 
 function randCharacter() {
-    let dndClass = randEntry(template.classes);
-    let race = randEntry(template.races);
-    let attitude = randEntry(template.attitudes);
-    let quirk = randEntry(template.quirks);
+    const dndClass = randEntry(template.classes);
+    const race = randEntry(template.races);
+    const attitude = randEntry(template.attitudes);
+    const quirk = randEntry(template.quirks);
 
     let indefArticle = 'a';
     if (attitude.match(/^[aeiou].*/i)) { // If word starts with a vowel
