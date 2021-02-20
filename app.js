@@ -129,7 +129,7 @@ function randCharacter() {
 }
 
 function generateCharacters(num) {
-    let str = "";
+    let str = "\n";
     for (let i = 0; i < num; i++) {
         str +=randCharacter() + `\n\n`;
     }
